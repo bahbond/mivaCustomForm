@@ -1,0 +1,206 @@
+<noscript>
+	<p class="x-messages x-messages--error" data-hook="contact-us__warning">You must javascript enabled to use this form.</p>
+</noscript>
+<style>
+ .hidden1 {
+    display: none;
+  }
+</style>
+<form class="x-contact-form u-hidden" data-hook="contact-form" data-action="&mvte:urls:CTFM:auto;" method="post" accept-charset="UTF-8">
+	<fieldset>
+		<legend>Contact &mvte:global:store:name; Form</legend>
+		<mvt:comment>
+			<!--
+			This field is a spam-bot honeypot, it should not have a value!
+			-->
+		</mvt:comment>
+		<input class="u-hide-visually" type="text" name="website" aria-hidden="true" aria-label="website" tabindex="-1">
+		<div class="c-form-list">
+			<mvt:if expr="g.status EQ 'submitted'">
+				<div class="c-form-list__item c-form-list__item--full x-messages x-messages--success">Thank you for your inquiry. A &mvte:global:store:name; representative will contact you shortly.</div>
+			<mvt:elseif expr="g.status EQ 'error'">
+				<div class="c-form-list__item c-form-list__item--full x-messages x-messages--error">We're sorry, there was a problem processing your request.</div>
+			</mvt:if>
+			<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="contactName">Your name</label>
+				<input id="contactName" class="c-form-input" type="text" name="contactName" value="&mvte:global:contactName;" required aria-required="true">
+			</div>
+			<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="contactEmail">Your email address</label>
+				<input id="contactEmail" class="c-form-input" type="email" name="contactEmail" value="&mvte:global:contactEmail;" placeholder="test@domain.com" required aria-required="true">
+			</div>
+			<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="contactPhone">Phone Number</label>
+				<input id="contactPhone" class="c-form-input" type="text" name="contactPhone" value="&mvte:global:contactPhone;" placeholder="800-867-5309" required aria-required="true">
+			</div>
+
+				<label class="c-form-label is-required" for="packageType">What type of packaging are you looking for?</label>
+				<div class="c-form-select">
+					<select id="packageType" class="c-form-select__dropdown" name="packageType" required aria-required="true">
+						<mvt:if expr="g.packageType EQ 'Merchandise Bags'">
+							<option value="Merchandise Bags" selected>Merchandise Bags</option>
+						<mvt:else>
+							<option value="Merchandise Bags">Merchandise Bags</option>
+						</mvt:if>
+						<mvt:if expr="g.packageType EQ 'Layflat Poly Bags'">
+							<option value="Layflat Poly Bags" selected>Layflat Poly Bags</option>
+						<mvt:else>
+							<option value="Layflat Poly Bags">Layflat Poly Bags</option>
+						</mvt:if>
+						<mvt:if expr="g.packageType EQ 'Zip Top Poly Bags'">
+							<option value="Zip Top Poly Bags" selected>Zip Top Poly Bags</option>
+						<mvt:else>
+							<option value="Zip Top Poly Bags">Zip Top Poly Bags</option>
+						</mvt:if>
+						<mvt:if expr="g.packageType EQ 'Ultra Clear Polypropylene'">
+							<option value="Ultra Clear Polypropylene" selected>Ultra Clear Polypropylene</option>
+						<mvt:else>
+							<option value="Ultra Clear Polypropylene">Ultra Clear Polypropylene</option>
+						</mvt:if>
+						<mvt:if expr="g.packageType EQ 'Poly Mailers'">
+							<option value="Poly Mailers" selected>Poly Mailers</option>
+						<mvt:else>
+							<option value="Poly Mailers">Poly Mailers</option>
+						</mvt:if>
+					</select>
+				</div>
+
+<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="packageSize">Width X Length X Depth(if necessary) in Inches</label>
+				<input id="packageSize" class="c-form-input" type="text" name="packageSize" value="&mvte:global:packageSize;" placeholder="4in. x 8in. x 2in." required aria-required="true">
+</div>
+
+<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="packageGauge">Gauge/Thickness</label>
+			</div>
+<div class="c-form-select">
+					<select id="packageGauge" class="c-form-select__dropdown" name="packageGauge" required aria-required="true">
+						<mvt:if expr="g.packageGauge EQ '1mil'">
+							<option value="1mil" selected>1mil</option>
+						<mvt:else>
+							<option value="Questions">1mil</option>
+						</mvt:if>
+						<mvt:if expr="g.packageGauge EQ '1.5mil'">
+							<option value="1.5mil" selected>1.5mil</option>
+						<mvt:else>
+							<option value="1.5mil">1.5mil</option>
+						</mvt:if>
+						<mvt:if expr="g.packageGauge EQ '2mil'">
+							<option value="2mil" selected>2mil</option>
+						<mvt:else>
+							<option value="Zip Top Poly Bags">2mil</option>
+						</mvt:if>
+						<mvt:if expr="g.packageGauge EQ '3mil'">
+							<option value="3mil" selected>3mil</option>
+						<mvt:else>
+							<option value="3mil">3mil</option>
+						</mvt:if>
+						<mvt:if expr="g.packageGauge EQ '4mil'">
+							<option value="4mil" selected>4mil</option>
+						<mvt:else>
+							<option value="4mil">4mil</option>
+						</mvt:if>
+						<mvt:if expr="g.packageGauge EQ '6mil'">
+							<option value="6mil" selected>6mil</option>
+						<mvt:else>
+							<option value="6mil">6mil</option>
+						</mvt:if>
+					</select>
+				</div>
+			</div>
+
+<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label " for="Film Color">Film Color</label>
+				<input id="filmColor" class="c-form-input" type="text" name="filmColor" value="&mvte:global:filmColor;" placeholder="Clear" >
+
+<label class="c-form-label is-required" for="printing">Do you want a printed bag?</label>
+<div class="c-form-select">
+  <select id="printing" class="c-form-select__dropdown" name="printing" required aria-required="true">
+    <option value="no" <mvt:if expr="g.printing EQ 'no'">selected</mvt:if>>No</option>
+    <option value="yes" <mvt:if expr="g.printing EQ 'yes'">selected</mvt:if>>Yes</option>
+  </select>
+</div>
+
+<div id="additionalFields" class="hidden1">
+  <div class="c-form-list__item c-form-list__item--full">
+    <label class="c-form-label" for="printColors">Number of Print Colors</label>
+    <input id="printColors" class="c-form-input" type="text" name="printColors" value="&mvte:global:printColors;" placeholder="Number of colors">
+  </div>
+
+<div class="c-form-list__item c-form-list__item--full">
+    <label class="c-form-label" for="printColors">Number of Printed Sides</label>
+    <input id="printSides" class="c-form-input" type="text" name="printSides" value="&mvte:global:printSides;" placeholder="Number of Printed Sides">
+  </div>
+</div>
+
+<div class="c-form-list__item c-form-list__item--full" >
+				<label class="c-form-label "  for="Delivery Zip Code">Delivery Zip Code</label>
+				<input id="zipCode" class="c-form-input"  type="text" name="zipCode" value="&mvte:global:zipCode;" placeholder="Zip Code (Shipping Included in Quotes)" >
+
+			</div>
+</div>
+			<mvt:comment>
+				<!--
+				This field helps to set the subject of the email. Set as many options as you would like.
+				-->
+			</mvt:comment>
+			<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="contactSubject">What can we help you with?</label>
+				<div class="c-form-select">
+					<select id="contactSubject" class="c-form-select__dropdown" name="contactSubject" required aria-required="true">
+						<mvt:if expr="g.contactSubject EQ 'Questions'">
+							<option value="Questions" selected>Questions</option>
+						<mvt:else>
+							<option value="Questions">Questions</option>
+						</mvt:if>
+						<mvt:if expr="g.contactSubject EQ 'Feedback'">
+							<option value="Feedback" selected>Feedback</option>
+						<mvt:else>
+							<option value="Feedback">Feedback</option>
+						</mvt:if>
+					</select>
+				</div>
+			</div>
+			<div class="c-form-list__item c-form-list__item--full">
+				<label class="c-form-label is-required" for="contactMessage">Message</label>
+				<textarea id="contactMessage" class="c-form-input c-form-input--long" name="contactMessage" placeholder="Type your message here...">&mvte:global:contactMessage;</textarea>
+			</div>
+			<div class="c-form-list__item &mvte:global:fault;">
+				<label class="c-form-label is-required" for="contactHuman">Are you human?</label>
+				<div class="c-control-group">
+					<mvt:comment>
+						<!--
+						This is a basic math challenge to confirm there is a person
+						entering the information. The numbers are random and the
+						answer key is passed to the process in Base64 for comparison.
+						-->
+					</mvt:comment>
+					<mvt:assign name="l.settings:humanOne" value="random('25')" />
+					<mvt:assign name="l.settings:humanTwo" value="random('25')" />
+					<mvt:assign name="l.settings:verify" value="crypto_base64_encode(l.settings:humanOne + l.settings:humanTwo)" />
+					<input class="c-form-input c-control-group__field u-color-black u-text-medium u-text-center" type="text" value="&mvte:humanOne; + &mvte:humanTwo; =" disabled aria-label="What is &mvte:humanOne; + &mvte:humanTwo;?">
+					<input id="contactHuman" class="c-form-input c-control-group__field" type="text" inputmode="decimal" name="human" value="" required aria-required="true">
+					<input type="hidden" name="verify" value="&mvte:verify;">
+				</div>
+			</div>
+			<div class="c-form-list__item">
+				<button class="c-button c-button--full" data-hook="contact-form__submit" type="submit" name="submit" disabled>Submit</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const yesOption = document.getElementById('printing');
+  const additionalFields = document.getElementById('additionalFields');
+
+  yesOption.addEventListener('change', function() {
+    if (yesOption.value === 'yes') {
+      additionalFields.classList.remove('hidden1');
+    } else {
+      additionalFields.classList.add('hidden1');
+    }
+  });
+});
+</script>
